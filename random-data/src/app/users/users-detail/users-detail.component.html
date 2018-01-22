@@ -1,0 +1,31 @@
+<div class="container" *ngIf="userDetail">
+  <div class="row">
+    <div class="col-xs-5">
+    <h4>Okay, here's what I could find about this specific user: </h4>
+    <br>
+      <form>
+        <div class="form-group">
+          <label for="id">Database Id:</label>
+          <input type="text" name="id" id="id" class="form-control " disabled [ngModel]="userDetail._id">
+        </div>
+        <div class="form-group">
+          <label for="name">I think his name is:</label>
+          <input type="text" id="name" name="name" class="form-control" disabled [ngModel]="userDetail.name">
+        </div>
+        <div class="form-group">
+          <label for="telefon">His phone number might be:</label>
+          <input type="tel" id="telefon" name="telefon" class="form-control" disabled [ngModel]="userDetail.telefon">
+        </div>
+        <div class="form-group">
+          <label for="activ">User activ?</label>
+          <select name="activ" id="activ" disabled [ngModel]="userDetail.activ">
+            <option [ngValue]="true">True</option>
+            <option [ngValue]="false">False</option>
+          </select>
+        </div>
+      </form>
+      <button class="btn btn-primary" [routerLink]="['edit']">Edit this user</button>
+      <button class="btn btn-danger" (click)="onDeleteUser()">Delete this user</button>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,33 @@
+<div class="container" >
+ <h3> Add a new user to Db </h3>
+  <hr>
+  <div class="row">
+    <div class="col-xs-5">
+      <form (ngSubmit)="onSubmit()" #f="ngForm">
+        <div class="form-group">
+          <label for="id">Database Id:</label>
+          <input type="text" name="id" id="id" class="form-control " disabled value="Don't worry, DB will handle this ">
+        </div>
+        <div class="form-group">
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" class="form-control" required ngModel>
+        </div>
+        <div class="form-group">
+          <label for="telefon">Telefon:</label>
+          <input type="tel" id="telefon" name="telefon" class="form-control" required ngModel>
+        </div>
+        <div class="form-group">
+          <label for="activ">User activ?</label>
+          <select name="activ" id="activ" ngModel >
+            <option [ngValue]="true">True</option>
+            <option [ngValue]="false">False</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <button class="btn btn-primary" type="submit">Submit form</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

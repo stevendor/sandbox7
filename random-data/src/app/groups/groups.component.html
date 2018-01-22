@@ -1,0 +1,21 @@
+<div class="container">
+  <h1>User List
+    <a class="btn btn-info pull-right">
+      <span>Add a new group</span>
+    </a>
+  </h1>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Nume</th>
+        <th>Element</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let group of groups">
+        <td>{{ group.name }}</td>
+        <td>{{ group.element}} </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
